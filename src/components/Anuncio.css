@@ -1,0 +1,146 @@
+.container {
+    padding: 20px;
+
+}
+
+.table-custom {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; 
+}
+.form-control {
+    z-index: 2;
+}
+
+.table-custom th, .table-custom td {
+    vertical-align: middle;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-custom th {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+}
+
+.table-custom tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-custom td {
+    text-align: center;
+}
+
+.table-custom .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.table-custom .btn-primary {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.table-custom .btn-primary:hover {
+    background-color: #0053ba;
+    border-color: #004085;
+}
+
+.table-custom .btn-danger {
+    background-color: #e63946;
+    border-color: #d32f2f;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.table-custom .btn-danger:hover {
+    background-color: #b71c1c;
+    border-color: #9f1919;
+}
+
+.table-custom .btn i {
+    margin-right: 5px; 
+}
+
+.table-responsive {
+    margin-top: 20px;
+    margin: 10px 0; 
+    padding: 10px 0; 
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px; 
+    justify-content: center; 
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #007bff;
+    text-decoration: none;
+    z-index: 2;
+
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+}
+
+.pagination .active .page-link {
+    background-color: #007bff;
+    color: white;
+
+}
+
+.button-container {
+    margin-bottom: 20px; 
+}
+
+.button-container button {
+    margin-right: 10px; 
+}
+.btn-sesion {
+    position: relative;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid transparent; 
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-sesion:hover {
+    background-color: #03cc57; 
+    color: white;
+  }
+ 

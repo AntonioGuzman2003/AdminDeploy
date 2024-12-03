@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+
+}
+
+.logoimage {
+  width: 300px;
+  height: auto;
+  animation: heartbeat 6s infinite;
+
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 0.2));
+  }
+  30% {
+    transform: scale(1.1);
+    filter: drop-shadow( 0 0 6px rgba(0, 0, 0, 0.5));
+  }
+  60% {
+    transform: scale(1);
+    filter: drop-shadow( 0 0 9px rgba(0, 0, 0, 0.2));
+  }
+  80% {
+    transform: scale(1.1);
+    filter: drop-shadow( 0 0 6px rgba(0, 0, 0, 0.4));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 0.2));
+  }
+ 
+}
+
+
+
+.plus-sign {
+  font-size: 80px;
+  color: #00c700;
+  margin-left: 10px;
+}
+
+.admin-panel {
+  margin-left: 100px;
+  padding: 70px;
+  text-align: center;
+  background-color: white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.admin-panel h1 {
+  color: #00c700;
+  font-size: 54px;
+}
+
+.admin-panel h2 {
+  color: #555;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-sesion {
+  position: relative;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent; 
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.btn-sesion:hover {
+  background-color: #03cc57; 
+  color: white;
+}
+
+.btn-3::after {
+  content: "";
+  position: absolute;
+  width: 10%; 
+  height: 110%;
+  left: -10%;
+  top: 0;
+  transform: skew(20deg, 0deg);
+  z-index: -1;
+  transition: all 0.4s ease;
+  background-color: transparent;
+
+}
+
+.btn-3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: skew(20deg, 0deg);
+  border: 3px solid #03cc57;
+  transition: all 0.4s ease;
+  z-index: -1;
+  
+}
+
+.btn-3:hover{
+  color: white;
+}
+
+.btn-3:hover::before {
+  background-color: #03cc57;
+  border: 3px solid #029740;
+  transform: skew(20deg, 0deg) scale(1.1);
+  color: white;
+
+
+}
+
