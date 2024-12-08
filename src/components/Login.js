@@ -63,8 +63,8 @@ const Login = () => {
   return (
     <div className="login-rich-content">
       <div className="login-form">
-        <h1>BIENVENIDO ADMINISTRADOR</h1>
-
+        <h1>BIENVENIDO </h1>
+        <h2 style={{ color: 'green' }}>ADMINISTRADOR</h2>
         <form onSubmit={handleLogin}>
           <div className="input-group">
             <input

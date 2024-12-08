@@ -33,6 +33,11 @@ body {
   animation: heartbeat 6s infinite;
 
 }
+.cargaimagen {
+  width: 50px;
+  height: auto;
+  animation: heartbeat 6s infinite;
+}
 @keyframes heartbeat {
   0% {
     transform: scale(1);

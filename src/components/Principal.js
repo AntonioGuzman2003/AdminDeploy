@@ -29,7 +29,7 @@ function Principal() {
 
         <div className="admin-panel">
           <h1>Buscam</h1>
-          <h2>Administrar</h2>
+          <h2 style={{ color: 'green' }}>Administrador</h2>
           <div className="contenedor">
             <Link to="/Usuario" className="btn btn-3">Usuarios</Link>
             <Link to="/Anuncio" className="btn btn-3">Productos</Link>

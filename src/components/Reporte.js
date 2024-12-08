@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Reporte.css';
 import './fondo.css';
 import fondoVideo from '../video/fondo.mp4';
+import carga from "../assets/carga.webp"; 
 
 const DenunciasTable = () => {
   const [data, setData] = useState([]);
@@ -29,10 +30,9 @@ const DenunciasTable = () => {
             return {
               'Marca temporal': item['Marca temporal'],
               'Nombre del vendedor': item['Nombre del vendedor'],
-              'Correo electrónico del vendedor': item['Correo electrónico del vendedor'],
-              'Motivo de denuncia': item['Motivo de denuncia\n']?.trim(),
-              'Subir captura de pantalla de la publicación como evidencia': item['Subir captura de pantalla de la publicación como evidencia\n']?.trim(),
-              'Consentimiento del Usuario': item['Consentimiento del Usuario'],
+              'Motivo de denuncia': item['Motivo de denuncia'],
+              'Subir captura de pantalla de la publicación como evidencia': item['Subir captura de pantalla de la publicación como evidencia'],
+              'Consentimiento del usuario': item['Consentimiento del usuario'],
             };
           });
   
@@ -73,11 +73,15 @@ const DenunciasTable = () => {
       </button>
 
       {loading ? (
-        <p>Cargando...</p>
-      ) : error ? (
+        <div className="logo">
+          <img src={carga} alt="carga" className="cargaimagen" />
+        </div>      ) : error ? (
         <p>{error}</p>
       ) : (
+
         <>
+        <div class="containerreport">
+
           <input
             type="text"
             placeholder="Buscar por nombre del vendedor"
@@ -91,7 +95,6 @@ const DenunciasTable = () => {
               <tr>
                 <th>Marca temporal</th>
                 <th>Nombre del vendedor</th>
-                <th>Correo electrónico del vendedor</th>
                 <th>Motivo de denuncia</th>
                 <th>Captura de pantalla</th>
                 <th>Consentimiento del usuario</th>
@@ -107,7 +110,6 @@ const DenunciasTable = () => {
                   <tr key={index}>
                     <td>{fila['Marca temporal']}</td>
                     <td>{fila['Nombre del vendedor']}</td>
-                    <td>{fila['Correo electrónico del vendedor']}</td>
                     <td>{motivoDenuncia}</td>
                     <td>
                       {directImageUrl ? (
@@ -118,12 +120,14 @@ const DenunciasTable = () => {
                         'No disponible'
                       )}
                     </td>
-                    <td>{fila['Consentimiento del Usuario']}</td>
+                    <td>{fila['Consentimiento del usuario']}</td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
+          </div>
+
         </>
       )}
                    <video muted autoPlay loop className="background-video">
