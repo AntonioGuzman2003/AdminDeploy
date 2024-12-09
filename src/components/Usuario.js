@@ -7,13 +7,15 @@ import { db } from '../firebaseConfig/firebase';
 import { useNavigate } from 'react-router-dom';
 import './Usuario.css';
 import './fondo.css';
+import basuraIcon from '../assets/basura.png';
+import editarIcon from '../assets/editar.png';
 import fondoVideo from '../video/fondo.mp4';
 const MySwal = withReactContent(Swal);
 
 const Show = () => {
     const [users, setUsers] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const rowsPerPage = 7;
+    const rowsPerPage = 5;
     const [searchTerm, setSearchTerm] = useState('');
 
     const usersRef = ref(db, 'Usuarios');
@@ -112,7 +114,7 @@ const filteredUsers = users.filter((user) =>
                         className="form-control mb-3"
                     />
                     <div className="table-responsive">
-                        <table className="table table-bordered table-hover">
+                        <table className="table table-bordered table-hover" >
                             <thead className="table-light">
                                 <tr>
                                     <th>No.</th>
@@ -145,11 +147,18 @@ const filteredUsers = users.filter((user) =>
                                         </td>
                                         <td>
                                             <div className="action-buttons">
-                                                <Link to={`/Usuario/edit/${user.id}`} className="btn btn-primary btn-sm">Editar</Link>
-                                                <button onClick={() => confirmDelete(user.id)} className="btn btn-danger btn-sm">Eliminar</button>
+                                                <Link to={`/Usuario/edit/${user.id}`} className="btn btn-sm">
+                                                    <img src={editarIcon} alt="Editar" style={{ width: '20px', height: '20px' }} />
+                                                </Link>
+                                                <button 
+                                                    onClick={() => confirmDelete(user.id)} 
+                                                    className="btn btn-sm"
+                                                    style={{ background: 'none', border: 'none', padding: 0 }}
+                                                >
+                                                    <img src={basuraIcon} alt="Eliminar" style={{ width: '20px', height: '20px' }} />
+                                                </button>
                                             </div>
                                         </td>
-
                                     </tr>
                                 ))}
                             </tbody>

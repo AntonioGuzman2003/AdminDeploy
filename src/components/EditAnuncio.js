@@ -83,7 +83,7 @@ const Edit = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container" style={{ paddingTop: '50px'}}>
             <h1>Editar Anuncio</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">

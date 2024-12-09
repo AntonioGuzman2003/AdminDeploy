@@ -8,13 +8,14 @@ import { useNavigate } from 'react-router-dom';
 import './Anuncio.css';
 import './fondo.css';
 import fondoVideo from '../video/fondo.mp4';
-
+import basuraIcon from '../assets/basura.png';
+import editarIcon from '../assets/editar.png';
 const MySwal = withReactContent(Swal);
 
 const Show = () => {
     const [anuncios, setAnuncios] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const rowsPerPage = 6;
+    const rowsPerPage = 5;
     const [searchTerm, setSearchTerm] = useState('');
 
     const anunciosRef = ref(db, 'Anuncios');
@@ -138,10 +139,17 @@ const Show = () => {
                                         <td>{anuncio.descripcion}</td>
                                         <td>
                                             <div className="action-buttons">
-                                            <Link to={`/Anuncio/EditAnuncio/${anuncio.id}`} className="btn btn-primary btn-sm me-2">Editar</Link>
-                                            <button onClick={() => confirmDelete(anuncio.id)} className="btn btn-danger btn-sm">Eliminar</button>
+                                                <Link to={`/Anuncio/EditAnuncio/${anuncio.id}`} className="btn btn-sm">
+                                                    <img src={editarIcon} alt="Editar" style={{ width: '20px', height: '20px' }} />
+                                                </Link>
+                                                <button 
+                                                    onClick={() => confirmDelete(anuncio.id)} 
+                                                    className="btn btn-sm"
+                                                    style={{ background: 'none', border: 'none', padding: 0 }}
+                                                >
+                                                    <img src={basuraIcon} alt="Eliminar" style={{ width: '20px', height: '20px' }} />
+                                                </button>
                                             </div>
-                                           
                                         </td>
                                     </tr>
                                 ))}

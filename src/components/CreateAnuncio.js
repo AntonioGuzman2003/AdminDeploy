@@ -148,7 +148,9 @@ const Create = () => {
                 </div>
                 <button type="submit" className="btn btn-primary">Crear Anuncio</button>
             </form>
+            
         </div>
+        
     );
 };
 

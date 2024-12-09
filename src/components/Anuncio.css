@@ -1,5 +1,6 @@
 .container {
-    padding: 20px;
+    margin-top: 100px;
+    max-width: 100%;
 
 }
 
@@ -16,6 +17,9 @@
 
 .table-custom th, .table-custom td {
     vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 12px 15px;
     border-bottom: 1px solid #ddd;
 }
@@ -143,4 +147,12 @@
     background-color: #03cc57; 
     color: white;
   }
- 
+  @media (max-width: 768px) {
+    .table-custom {
+        font-size: 12px; 
+    }
+
+    .table-custom th, .table-custom td {
+        padding: 8px; 
+    }
+}
